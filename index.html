@@ -8,11 +8,78 @@
 </head>
 <body>
   <header>
-    <h1>Administración de la Configuración del Software</h1>
+    <h1>El proceso de Administración de la Configuración del Software (ACS)</h1>
+    <p>Resumen de la sección 22.3 de Pressman</p>
+    <nav>
+      <a href="#introduccion">Introducción</a>
+      <a href="#objetivos">Objetivos</a>
+      <a href="#identificacion">Identificación</a>
+    </nav>
   </header>
 
   <main>
-    <!-- Las secciones del resumen se agregan desde rama-contenido -->
+    <section id="introduccion">
+      <h2>Introducción</h2>
+      <p>
+        Todo software cambia: cambian los requisitos, se corrigen errores, se agregan funciones y se ajusta
+        el diseño. La <strong>Administración de la Configuración del Software (ACS)</strong>, también conocida
+        como SCM, es el conjunto de actividades que permite que esos cambios ocurran de forma ordenada, sin que
+        el equipo pierda el control sobre qué versión es la buena, quién modificó qué y por qué.
+      </p>
+      <p>
+        En la sección 22.3, Pressman explica que la ACS no es solo "guardar archivos", sino un
+        <strong>proceso</strong> con tareas bien definidas. Ese proceso no tiene que ser burocrático, pero sí
+        debe dar respuesta clara a preguntas como: ¿cómo identificamos cada pieza del software?, ¿cómo
+        manejamos muchas versiones a la vez?, ¿quién aprueba un cambio? y ¿cómo nos enteramos de lo que cambió?
+      </p>
+    </section>
+
+    <section id="objetivos">
+      <h2>Objetivos del proceso ACS</h2>
+      <p>Según Pressman, el proceso persigue cuatro objetivos principales:</p>
+      <ol>
+        <li><strong>Identificar</strong> todos los ítems que, en conjunto, forman la configuración del software.</li>
+        <li><strong>Administrar los cambios</strong> que se hacen a uno o varios de esos ítems.</li>
+        <li><strong>Facilitar la construcción</strong> de distintas versiones de la aplicación.</li>
+        <li><strong>Garantizar la calidad</strong> del software mientras la configuración evoluciona en el tiempo.</li>
+      </ol>
+      <p>
+        De estos objetivos salen las <strong>cinco tareas de la ACS</strong>: identificación, control de
+        versión, control de cambio, auditoría de la configuración y reporte de estado. Pressman las dibuja
+        como <em>capas concéntricas</em>: un ítem de configuración (ICS) nace en el centro y, a lo largo de su
+        vida, se mueve hacia afuera atravesando cada capa hasta formar parte de una versión liberada.
+      </p>
+    </section>
+
+    <section id="identificacion">
+      <h2>1. Identificación de objetos de la configuración</h2>
+      <p>
+        Para poder controlar algo, primero hay que nombrarlo. Cada <strong>ítem de configuración del software
+        (ICS)</strong> debe tener un nombre único y organizarse con un enfoque orientado a objetos. Pressman
+        distingue dos tipos:
+      </p>
+      <ul>
+        <li><strong>Objeto básico:</strong> una unidad de información creada durante el análisis, diseño,
+          código o prueba. Ej.: una sección de la especificación de requisitos o el código de un componente.</li>
+        <li><strong>Objeto agregado:</strong> una colección de objetos básicos y/u otros agregados.
+          Ej.: la especificación de diseño completa, que agrupa el modelo de datos, el modelo arquitectónico, etc.</li>
+      </ul>
+      <p>Cada objeto se describe con cuatro características:</p>
+      <ul>
+        <li><strong>Nombre:</strong> cadena que lo identifica sin ambigüedad.</li>
+        <li><strong>Descripción:</strong> tipo de ICS, proyecto al que pertenece y datos de cambio/versión.</li>
+        <li><strong>Recursos:</strong> lo que el objeto usa o requiere (tipos de datos, funciones, variables).</li>
+        <li><strong>Realización:</strong> puntero al contenido real del objeto básico (en un agregado es nulo).</li>
+      </ul>
+      <p>
+        Además, los objetos se relacionan entre sí. La relación <code>&lt;parte de&gt;</code> crea una
+        jerarquía (un diagrama de clases es <em>parte del</em> modelo de requisitos), mientras que
+        <code>&lt;interrelacionado&gt;</code> conecta objetos de ramas distintas de esa jerarquía. Estas
+        relaciones permiten estimar el <strong>impacto de un cambio</strong>. Por último, el esquema de
+        identificación debe aceptar que los objetos evolucionan: pueden cambiar muchas veces antes y después
+        de convertirse en línea de referencia.
+      </p>
+    </section>
   </main>
 
   <footer>
