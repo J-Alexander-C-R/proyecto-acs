@@ -14,6 +14,10 @@
       <a href="#introduccion">Introducción</a>
       <a href="#objetivos">Objetivos</a>
       <a href="#identificacion">Identificación</a>
+      <a href="#version">Control de versión</a>
+      <a href="#cambio">Control de cambio</a>
+      <a href="#auditoria">Auditoría</a>
+      <a href="#reporte">Reporte</a>
     </nav>
   </header>
 
@@ -78,6 +82,98 @@
         relaciones permiten estimar el <strong>impacto de un cambio</strong>. Por último, el esquema de
         identificación debe aceptar que los objetos evolucionan: pueden cambiar muchas veces antes y después
         de convertirse en línea de referencia.
+      </p>
+    </section>
+
+    <section id="version">
+      <h2>2. Control de versión</h2>
+      <p>
+        El control de versión combina <strong>procedimientos y herramientas</strong> para manejar las distintas
+        versiones de los objetos de configuración. Un buen sistema de control de versión ofrece:
+      </p>
+      <ol>
+        <li><strong>Repositorio</strong> (base de datos del proyecto) donde viven todos los ICS relevantes.</li>
+        <li><strong>Administración de versiones</strong>: guarda todas las versiones de un objeto, o las
+          reconstruye a partir de las diferencias entre ellas.</li>
+        <li><strong>Facilidad de construcción</strong>: reúne los ICS correctos para armar una versión
+          específica del software.</li>
+        <li><strong>Rastreador de conflictos (errores)</strong>: registra el estado de los problemas abiertos
+          de cada objeto.</li>
+      </ol>
+      <p>
+        Algunos sistemas trabajan con <strong>conjuntos de cambio</strong>: un paquete con todos los cambios
+        necesarios para producir una versión, junto con el motivo, el autor y la fecha. Para construir una
+        versión a partir de conjuntos de cambio se usa un <strong>modelo del sistema</strong> que contiene una
+        plantilla con la jerarquía y el orden de construcción de los componentes, reglas de construcción y
+        reglas de verificación.
+      </p>
+      <p>
+        Pressman presenta como herramienta típica el <strong>CVS</strong> (Sistema de Versiones Concurrentes):
+        guarda solo las diferencias entre versiones, da a cada desarrollador su propio directorio de trabajo y
+        mezcla los cambios al final. Sin embargo, CVS no construye versiones ni implementa por sí solo un
+        proceso de control de cambio.
+      </p>
+    </section>
+
+    <section id="cambio">
+      <h2>3. Control de cambio</h2>
+      <p>
+        Controlar el cambio es un acto de <strong>equilibrio</strong>: con muy poco control el proyecto cae en el
+        caos; con demasiado, la burocracia frena el trabajo creativo. En proyectos grandes, el control combina
+        procedimientos humanos con herramientas automatizadas. El flujo general es:
+      </p>
+      <ol>
+        <li>Se recibe una <strong>petición de cambio</strong>.</li>
+        <li>El desarrollador la <strong>evalúa</strong>: mérito técnico, efectos colaterales, impacto y costo.</li>
+        <li>Se genera un <strong>reporte de cambio</strong> para la <strong>Autoridad de Control de Cambio (ACC)</strong>.</li>
+        <li>La ACC decide. Si aprueba, emite una <strong>Orden de Cambio de Ingeniería (OCI)</strong>; si no, se informa al usuario.</li>
+        <li>Se hace <em>check-out</em> del ICS, se aplica el cambio y se revisa (auditoría).</li>
+        <li>Se hace <em>check-in</em>, se establece una línea de referencia para pruebas y se aplican actividades de SQA.</li>
+        <li>El cambio se promueve a la siguiente liberación, se reconstruye y se distribuye la nueva versión.</li>
+      </ol>
+      <p>
+        Dentro de este proceso, el control de versión aporta dos mecanismos clave: el <strong>control de
+        acceso</strong> (quién puede modificar cada ICS) y el <strong>control de sincronización</strong>
+        (evitar que dos personas sobrescriban el trabajo del otro).
+      </p>
+      <p>
+        El nivel de control depende del momento: antes de que un ICS sea línea de referencia el control es
+        <strong>informal</strong>; cuando ya es línea de referencia se aplica control a <strong>nivel de
+        proyecto</strong> (aprueba el gerente o la ACC); y cuando el producto se libera al cliente el control
+        es <strong>formal</strong>. La ACC debe tener una visión global: cómo afecta el cambio al hardware, al
+        desempeño, a la calidad y a la percepción del cliente.
+      </p>
+    </section>
+
+    <section id="auditoria">
+      <h2>4. Auditoría de la configuración</h2>
+      <p>
+        Identificar, versionar y controlar el cambio pone orden, pero no garantiza que el cambio se hizo bien.
+        Para eso existen dos actividades: la <strong>revisión técnica</strong>, que verifica la exactitud técnica
+        del ICS modificado, y la <strong>auditoría de configuración</strong>, que revisa aspectos que la
+        revisión no suele cubrir. La auditoría pregunta:
+      </p>
+      <ol>
+        <li>¿Se hizo el cambio indicado en la OCI? ¿Se agregó algo más?</li>
+        <li>¿Se realizó una revisión técnica?</li>
+        <li>¿Se siguió el proceso y los estándares de ingeniería de software?</li>
+        <li>¿Se marcó el cambio en el ICS, con fecha y autor?</li>
+        <li>¿Se siguieron los procedimientos ACS para anotar, registrar y reportar el cambio?</li>
+        <li>¿Se actualizaron los ICS relacionados?</li>
+      </ol>
+    </section>
+
+    <section id="reporte">
+      <h2>5. Reporte de estado</h2>
+      <p>
+        El <strong>reporte de estado de la configuración (REC)</strong>, o contabilidad de estado, responde
+        cuatro preguntas: <strong>¿qué ocurrió?, ¿quién lo hizo?, ¿cuándo ocurrió? y ¿qué más se verá
+        afectado?</strong>
+      </p>
+      <p>
+        Se genera una entrada REC cada vez que un ICS recibe una identificación nueva o se actualiza, cada vez
+        que la ACC emite una OCI y cada vez que se realiza una auditoría. Esta información puede publicarse en
+        línea para que desarrolladores y gerentes estén siempre al tanto de los cambios importantes.
       </p>
     </section>
   </main>
