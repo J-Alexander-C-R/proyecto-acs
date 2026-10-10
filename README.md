@@ -1,109 +1,59 @@
-# Proyecto ACS: El proceso de Administración de la Configuración del Software
+# Proyecto ACS de John Cedano
 
-Página web interactiva que resume la sección 22.3, *El proceso ACS*, del libro *Ingeniería del Software:
-un enfoque práctico* de Roger S. Pressman. El repositorio se construyó aplicando el mismo proceso que
-explica: identificación, control de versión, control de cambio, auditoría y reporte.
+Página web que resume la sección 22.3 del libro de Pressman sobre la Administración de la Configuración del Software (ACS).
+Explica cómo se controlan los cambios y las versiones de un software.
 
-🔗 **Página publicada:** https://j-alexander-c-r.github.io/proyecto-acs/
+- **Página publicada:** https://j-alexander-c-r.github.io/proyecto-acs/
+- **Repositorio:** https://github.com/J-Alexander-C-R/proyecto-acs
 
-## Integrantes
+**Cómo verlo:** abrir el enlace de la página, o descargar el repositorio y abrir `index.html` en el navegador.
 
-- John Cedano
+## Integrante
 
-> Actividad realizada de forma individual con autorización del profesor. Para demostrar el trabajo
-> colaborativo se usaron dos ramas paralelas (`rama-contenido` y `rama-diseno`) y se resolvieron
-> conflictos de integración reales.
+- **John Alexander Cedano** — Matrícula: 2023-3781
 
-## Descripción del proyecto
+## Objetivo
 
-La página explica los cuatro objetivos del proceso ACS y sus cinco tareas (identificación, control de
-versión, control de cambio, auditoría de la configuración y reporte de estado). Incluye un diagrama
-interactivo de capas, una tabla que relaciona cada tarea con Git, una checklist de auditoría y un quiz
-de repaso.
+El objetivo fue entender qué es la ACS y ponerla en práctica usando Git y GitHub para construir una página web.
 
-## Objetivo de la actividad
+## Tecnologías
 
-Analizar y sintetizar la sección 22.3 de Pressman y demostrar en la práctica el control de versiones y el
-trabajo con ramas en Git y GitHub.
-
-## Tecnologías utilizadas
-
-- HTML5, CSS3 (variables, grid, flexbox, modo oscuro) y JavaScript sin librerías.
-- Git y GitHub para el control de versiones.
-- GitHub Pages para publicar la página.
+- **HTML, CSS y JavaScript:** para construir la página.
+- **Git:** control de versiones, ramas y merges.
+- **GitHub:** repositorio en línea y Pull Requests.
+- **GitHub Pages:** para publicar la página.
+- **Visual Studio Code:** editor de código y terminal.
 
 ## Estructura del proyecto
 
 ```
 proyecto-acs/
-├── index.html            # Página principal con el resumen
-├── README.md             # Este archivo
-├── css/
-│   └── styles.css        # Estilos, modo oscuro y diseño responsive
-├── js/
-│   └── script.js         # Tema, barra de progreso, diagrama, checklist y quiz
-└── assets/
-    └── images/
-        └── capas-acs.svg # Diagrama de capas del proceso ACS
+├── index.html        → la página
+├── README.md         → este archivo
+├── css/styles.css    → estilos y modo oscuro
+├── js/script.js      → diagrama, checklist y quiz
+└── assets/images/    → imágenes
 ```
 
-## Flujo de trabajo y control de versiones
+## Cómo trabajé con Git
 
-```
-main ──●── v0.1 ─────────────●── v1.0 ──────────●── v1.1 ───────●── v1.2
-        \                   / \                / \             /          ├─ rama-contenido ─●   ├─ (quiz) ──────●   ├─ (README) ─●   │
-         └─ rama-diseno ────────●  └─ (checklist) ──●  └─ (menú) ───●
-```
+Separé el trabajo en ramas para que el contenido y el diseño avanzaran por su lado y luego unirlos en `main`.
 
-Cada parte del trabajo se hizo en su propia rama y se integró a `main` con `git merge --no-ff`, de modo
-que el historial muestra claramente el trabajo en paralelo. Las versiones estables se marcaron con tags
-(`v0.1`, `v1.0`, `v1.1`, `v1.2`), que funcionan como **líneas de referencia**.
+- `rama-contenido`: el texto del resumen, el quiz y las tablas.
+- `rama-diseno`: los estilos, el diagrama y los arreglos.
+- `rama-readme`: este README.
 
-Para ver el historial completo:
+Al unir las ramas salieron 4 conflictos:
 
-```bash
-git log --oneline --graph --all
-```
+1. El encabezado y el menú de `index.html`, porque las dos ramas los cambiaron. Junté el diseño de una con el texto de la otra.
+2. El pie de página de `index.html`. Dejé el estilo nuevo con el texto de contenido.
+3. El final de `styles.css`, porque las dos ramas agregaron estilos ahí. Dejé los dos, pero al resolverlo se perdieron dos `}` y la página se veía mal; lo arreglé después de probarla.
+4. El `README.md`, que las dos ramas habían editado.
 
-### Conflictos resueltos (reporte de estado)
+Cuando agregué dos preguntas al quiz, el puntaje se quedó en "0 / 5" porque estaba escrito a mano. Lo corregí en `rama-diseno` para que cuente las preguntas solo, agregué un botón para reiniciar el quiz y lo integré con el **Pull Request #1**.
 
-| # | Archivo | Causa | Resolución |
-|---|---------|-------|------------|
-| 1 | `index.html` | Ambas ramas modificaron el encabezado, el menú y el contenido de `<main>`. | Se conservó el diseño `.hero` y el menú fijo de *rama-diseno* con el título y los enlaces de *rama-contenido*; el diagrama se insertó después de "Objetivos". |
-| 1 | `README.md` | Ambas ramas escribieron su participación en la misma línea. | Se conservaron las dos descripciones. |
-| 2 | `index.html` | Ambas ramas cambiaron el pie de página. | Se unió la clase `.pie` y el enlace "Volver arriba" con el texto descriptivo. |
-| 3 | `css/styles.css` | Ambas ramas agregaron reglas al final del archivo. | Se conservaron ambos bloques. En la auditoría posterior se detectaron dos llaves `}` perdidas y se corrigieron. |
-| 4 | `README.md` | *rama-diseno* agregó "Tecnologías" donde *rama-contenido* reescribió el README. | Se mantuvo el README completo y se ubicó "Tecnologías" antes de "Estructura". |
+Las versiones estables están marcadas con tags: `v0.1`, `v1.0`, `v1.1` y `v1.2`.
 
-### Relación con el proceso ACS
+## Qué aprendí
 
-| Tarea ACS | Aplicación en este repositorio |
-|-----------|--------------------------------|
-| Identificación | Cada archivo es un ICS con nombre y ubicación fija. |
-| Control de versión | Commits descriptivos y tags de versión. |
-| Control de cambio | Ramas para cada cambio e integración mediante merge. |
-| Auditoría | Revisión del diff y prueba de la página antes de cada merge. |
-| Reporte de estado | `git log`, mensajes de merge y esta tabla de conflictos. |
-
-## Participación
-
-- **rama-contenido:** redacción del resumen (introducción, objetivos, las cinco tareas ACS, ejemplos,
-  conclusión y referencia), quiz de repaso y README.
-- **rama-diseno:** diseño visual (paleta, encabezado, menú fijo, modo oscuro), diagrama interactivo de
-  capas, checklist de auditoría, lógica del quiz y ajustes responsive.
-
-## Cómo ver el proyecto
-
-- **En línea:** abrir el enlace de GitHub Pages indicado arriba.
-- **En local:** clonar el repositorio y abrir `index.html` en el navegador:
-
-```bash
-git clone https://github.com/J-Alexander-C-R/proyecto-acs.git
-cd proyecto-acs
-start index.html
-```
-
-## Referencia
-
-Pressman, R. S. (2010). *Ingeniería del software: un enfoque práctico* (7.ª ed.). McGraw-Hill.
-Capítulo 22, sección 22.3.
+Me limitó un poco tener que trabajar solo, porque la idea era hacerlo en grupo. Aun así pude ver cómo se trabaja en distintas ramas, cómo aparecen los conflictos cuando dos cambios tocan lo mismo y cómo corregir fallos o hacer ajustes sin dañar lo que ya funcionaba.
