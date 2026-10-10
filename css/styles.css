@@ -352,3 +352,20 @@ footer {
     padding: 56px 16px 36px;
   }
 }
+
+/* Botón para reiniciar el quiz */
+.btn-reiniciar {
+  margin-left: 12px;
+  padding: 4px 12px;
+  border: 1px solid var(--primario);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--primario);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btn-reiniciar:hover {
+  background: var(--primario-claro);
+}

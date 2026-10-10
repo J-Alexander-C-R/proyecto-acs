@@ -94,7 +94,27 @@ preguntas.forEach((pregunta) => {
         opcion.classList.add("incorrecta");
         retro.textContent = "Incorrecto. La respuesta correcta está marcada en verde.";
       }
-      if (puntaje) puntaje.textContent = `${aciertos} / ${preguntas.length}`;
+      mostrarPuntaje();
     });
   });
 });
+
+// El total se calcula según las preguntas que existan en la página
+function mostrarPuntaje() {
+  if (puntaje) puntaje.textContent = `${aciertos} / ${preguntas.length}`;
+}
+mostrarPuntaje();
+
+// Botón para volver a intentar el quiz
+const btnReiniciar = document.getElementById("reiniciar-quiz");
+if (btnReiniciar) {
+  btnReiniciar.addEventListener("click", () => {
+    aciertos = 0;
+    preguntas.forEach((pregunta) => {
+      pregunta.classList.remove("respondida");
+      pregunta.querySelectorAll(".opcion").forEach((o) => o.classList.remove("correcta", "incorrecta"));
+      pregunta.querySelector(".retro").textContent = "";
+    });
+    mostrarPuntaje();
+  });
+}
