@@ -178,14 +178,16 @@
         del ICS modificado, y la <strong>auditoría de configuración</strong>, que revisa aspectos que la
         revisión no suele cubrir. La auditoría pregunta:
       </p>
-      <ol>
-        <li>¿Se hizo el cambio indicado en la OCI? ¿Se agregó algo más?</li>
-        <li>¿Se realizó una revisión técnica?</li>
-        <li>¿Se siguió el proceso y los estándares de ingeniería de software?</li>
-        <li>¿Se marcó el cambio en el ICS, con fecha y autor?</li>
-        <li>¿Se siguieron los procedimientos ACS para anotar, registrar y reportar el cambio?</li>
-        <li>¿Se actualizaron los ICS relacionados?</li>
-      </ol>
+      <p class="ayuda">Marca cada punto como si estuvieras auditando un cambio real:</p>
+      <ul class="checklist" id="checklist-auditoria">
+        <li><label><input type="checkbox"> ¿Se hizo el cambio indicado en la OCI? ¿Se agregó algo más?</label></li>
+        <li><label><input type="checkbox"> ¿Se realizó una revisión técnica?</label></li>
+        <li><label><input type="checkbox"> ¿Se siguió el proceso y los estándares de ingeniería de software?</label></li>
+        <li><label><input type="checkbox"> ¿Se marcó el cambio en el ICS, con fecha y autor?</label></li>
+        <li><label><input type="checkbox"> ¿Se siguieron los procedimientos ACS para anotar, registrar y reportar el cambio?</label></li>
+        <li><label><input type="checkbox"> ¿Se actualizaron los ICS relacionados?</label></li>
+      </ul>
+      <p id="resultado-auditoria" class="resultado">0 de 6 puntos verificados.</p>
     </section>
 
     <section id="reporte">
@@ -250,8 +252,9 @@
     </section>
   </main>
 
-  <footer>
-    <p>Proyecto ACS</p>
+  <footer class="pie">
+    <p>Proyecto ACS · Hecho con HTML, CSS y JavaScript · Publicado con GitHub Pages</p>
+    <a href="#introduccion" class="volver">↑ Volver arriba</a>
   </footer>
 
   <script src="js/script.js"></script>

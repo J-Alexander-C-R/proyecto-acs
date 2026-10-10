@@ -59,3 +59,42 @@ document.querySelectorAll("[data-capa]").forEach((capa) => {
     if (infoCapa) infoCapa.innerHTML = capa.dataset.capa;
   });
 });
+
+// 5. Checklist de auditoría de la configuración
+const checklist = document.querySelectorAll("#checklist-auditoria input");
+const resultadoAuditoria = document.getElementById("resultado-auditoria");
+checklist.forEach((casilla) => {
+  casilla.addEventListener("change", () => {
+    const marcadas = [...checklist].filter((c) => c.checked).length;
+    resultadoAuditoria.textContent =
+      marcadas === checklist.length
+        ? "✅ Auditoría completa: el cambio puede incluirse en la nueva versión."
+        : `${marcadas} de ${checklist.length} puntos verificados.`;
+    resultadoAuditoria.classList.toggle("ok", marcadas === checklist.length);
+  });
+});
+
+// 6. Quiz de repaso
+const preguntas = document.querySelectorAll(".pregunta");
+const puntaje = document.getElementById("puntaje");
+let aciertos = 0;
+preguntas.forEach((pregunta) => {
+  const opciones = pregunta.querySelectorAll(".opcion");
+  const correcta = Number(pregunta.dataset.correcta);
+  opciones.forEach((opcion, i) => {
+    opcion.addEventListener("click", () => {
+      if (pregunta.classList.contains("respondida")) return;
+      pregunta.classList.add("respondida");
+      opciones[correcta].classList.add("correcta");
+      const retro = pregunta.querySelector(".retro");
+      if (i === correcta) {
+        aciertos++;
+        retro.textContent = "¡Correcto!";
+      } else {
+        opcion.classList.add("incorrecta");
+        retro.textContent = "Incorrecto. La respuesta correcta está marcada en verde.";
+      }
+      if (puntaje) puntaje.textContent = `${aciertos} / ${preguntas.length}`;
+    });
+  });
+});

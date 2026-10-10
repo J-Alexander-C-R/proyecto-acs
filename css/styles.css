@@ -221,3 +221,36 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Checklist de auditoría */
+.checklist {
+  list-style: none;
+  padding: 0;
+}
+
+.checklist li {
+  margin-bottom: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+}
+
+.checklist input {
+  margin-right: 8px;
+  accent-color: var(--acento);
+}
+
+.resultado {
+  font-weight: 600;
+  color: var(--suave);
+}
+
+.resultado.ok {
+  color: var(--acento);
+}
+
+/* Pie de página */
+.pie a.volver {
+  color: var(--primario);
+  text-decoration: none;
+}
