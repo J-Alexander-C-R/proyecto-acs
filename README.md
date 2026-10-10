@@ -4,7 +4,7 @@ Página web interactiva que resume la sección 22.3, *El proceso ACS*, del libro
 un enfoque práctico* de Roger S. Pressman. El repositorio se construyó aplicando el mismo proceso que
 explica: identificación, control de versión, control de cambio, auditoría y reporte.
 
-🔗 **Página publicada:** https://USUARIO.github.io/proyecto-acs/
+🔗 **Página publicada:** https://j-alexander-c-r.github.io/proyecto-acs/
 
 ## Integrantes
 
@@ -98,7 +98,7 @@ git log --oneline --graph --all
 - **En local:** clonar el repositorio y abrir `index.html` en el navegador:
 
 ```bash
-git clone https://github.com/USUARIO/proyecto-acs.git
+git clone https://github.com/J-Alexander-C-R/proyecto-acs.git
 cd proyecto-acs
 start index.html
 ```
