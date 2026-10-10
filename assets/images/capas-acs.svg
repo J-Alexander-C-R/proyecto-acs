@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">
+  <title>Capas del proceso ACS (Pressman, figura 22.4)</title>
+  <rect width="420" height="420" fill="#ffffff"/>
+  <circle cx="210" cy="210" r="200" fill="#dbe6ff"/>
+  <circle cx="210" cy="210" r="165" fill="#c4d6ff"/>
+  <circle cx="210" cy="210" r="130" fill="#a9c2ff"/>
+  <circle cx="210" cy="210" r="95" fill="#8aabff"/>
+  <circle cx="210" cy="210" r="60" fill="#5f88f0"/>
+  <circle cx="210" cy="210" r="28" fill="#2457d6"/>
+  <text x="210" y="32" fill="#1f2430" font-weight="bold">Reporte</text>
+  <text x="210" y="67" fill="#1f2430" font-weight="bold">Auditoría de la configuración</text>
+  <text x="210" y="102" fill="#1f2430" font-weight="bold">Control de cambio</text>
+  <text x="210" y="137" fill="#1f2430" font-weight="bold">Control de versión</text>
+  <text x="210" y="172" fill="#ffffff" font-weight="bold">Identificación</text>
+  <text x="210" y="215" fill="#ffffff" font-weight="bold">ICS</text>
+</svg>
