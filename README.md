@@ -6,6 +6,8 @@ Explica cómo se controlan los cambios y las versiones de un software.
 - **Página publicada:** https://j-alexander-c-r.github.io/proyecto-acs/
 - **Repositorio:** https://github.com/J-Alexander-C-R/proyecto-acs
 
+**Cómo verlo:** abrir el enlace de la página, o descargar el repositorio y abrir `index.html` en el navegador.
+
 ## Integrante
 
 - **John Alexander Cedano** — Matrícula: 2023-3781
