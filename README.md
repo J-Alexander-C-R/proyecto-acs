@@ -4,8 +4,9 @@ Resumen de la sección 22.3 (*El proceso ACS*) del libro *Ingeniería del Softwa
 
 ## Integrantes
 
-- Pendiente
+- John Cedano
 
 ## Participación
 
-- Pendiente
+- **rama-diseno:** diseño visual (paleta, encabezado, menú fijo, modo oscuro), diagrama interactivo de
+  capas y archivo `script.js`.
