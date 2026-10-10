@@ -4,8 +4,9 @@ Resumen de la sección 22.3 (*El proceso ACS*) del libro *Ingeniería del Softwa
 
 ## Integrantes
 
-- Pendiente
+- John Cedano
 
 ## Participación
 
-- Pendiente
+- **rama-contenido:** redacción del resumen (introducción, objetivos, las cinco tareas ACS, ejemplos,
+  conclusión y referencia).
