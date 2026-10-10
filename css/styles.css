@@ -1,0 +1,10 @@
+/* Estilos base del proyecto ACS */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
