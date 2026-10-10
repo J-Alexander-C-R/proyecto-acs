@@ -330,3 +330,25 @@ footer {
     overflow-x: auto;
   }
 }
+
+/* Ajuste: menú en una sola fila desplazable en celulares */
+@media (max-width: 640px) {
+  .menu {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .menu a {
+    flex: 0 0 auto;
+  }
+
+  section {
+    padding: 20px 16px;
+  }
+
+  .hero {
+    padding: 56px 16px 36px;
+  }
+}
