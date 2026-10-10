@@ -241,3 +241,92 @@ footer {
   background: var(--primario);
   color: #fff;
 }
+
+/* Checklist de auditoría */
+.checklist {
+  list-style: none;
+  padding: 0;
+}
+
+.checklist li {
+  margin-bottom: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+}
+
+.checklist input {
+  margin-right: 8px;
+  accent-color: var(--acento);
+}
+
+.resultado {
+  font-weight: 600;
+  color: var(--suave);
+}
+
+.resultado.ok {
+  color: var(--acento);
+}
+
+/* Pie de página */
+.pie a.volver {
+  color: var(--primario);
+  text-decoration: none;
+}
+
+/* Quiz */
+.pregunta {
+  margin-bottom: 18px;
+  padding: 16px;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+}
+
+.pregunta p {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.opcion {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: var(--fondo);
+  color: var(--texto);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.opcion:hover {
+  border-color: var(--primario);
+}
+
+.opcion.correcta {
+  border-color: var(--acento);
+  background: rgba(15, 157, 118, 0.15);
+}
+
+.opcion.incorrecta {
+  border-color: #d64545;
+  background: rgba(214, 69, 69, 0.12);
+}
+
+.retro {
+  min-height: 1.4em;
+  margin: 4px 0 0;
+  color: var(--suave);
+  font-weight: 400 !important;
+}
+
+/* Tabla responsive en pantallas pequeñas */
+@media (max-width: 640px) {
+  .tabla {
+    display: block;
+    overflow-x: auto;
+  }
+}
