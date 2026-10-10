@@ -169,6 +169,16 @@
         es <strong>formal</strong>. La ACC debe tener una visión global: cómo afecta el cambio al hardware, al
         desempeño, a la calidad y a la percepción del cliente.
       </p>
+      <table class="tabla">
+        <thead>
+          <tr><th>Nivel de control</th><th>¿Cuándo se aplica?</th><th>¿Quién aprueba el cambio?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Informal</td><td>Antes de que el ICS sea línea de referencia.</td><td>El propio desarrollador, si no afecta a otras partes del sistema.</td></tr>
+          <tr><td>Nivel de proyecto</td><td>Cuando el ICS ya es línea de referencia.</td><td>El gerente del proyecto (cambio local) o la ACC (si afecta a otros ICS).</td></tr>
+          <tr><td>Formal</td><td>Cuando el producto ya se liberó al cliente.</td><td>La ACC, siguiendo el proceso completo de petición, reporte y OCI.</td></tr>
+        </tbody>
+      </table>
     </section>
 
     <section id="auditoria">
@@ -277,6 +287,23 @@
         <button class="opcion">Antes de que el ICS sea línea de referencia</button>
         <button class="opcion">Cuando el producto se libera al cliente</button>
         <button class="opcion">Nunca; solo se usa control informal</button>
+        <p class="retro"></p>
+      </div>
+
+      <div class="pregunta" data-correcta="3">
+        <p>6. ¿Qué cuatro preguntas responde el reporte de estado (REC)?</p>
+        <button class="opcion">¿Cuánto cuesta?, ¿cuánto tarda?, ¿quién paga?, ¿quién prueba?</button>
+        <button class="opcion">¿Qué falló?, ¿por qué?, ¿cómo se arregla?, ¿quién lo arregla?</button>
+        <button class="opcion">¿Qué versión?, ¿qué rama?, ¿qué tag?, ¿qué commit?</button>
+        <button class="opcion">¿Qué ocurrió?, ¿quién lo hizo?, ¿cuándo ocurrió?, ¿qué más se afecta?</button>
+        <p class="retro"></p>
+      </div>
+
+      <div class="pregunta" data-correcta="0">
+        <p>7. En la realización de un objeto agregado, el puntero es…</p>
+        <button class="opcion">Nulo</button>
+        <button class="opcion">Un enlace al código fuente</button>
+        <button class="opcion">El nombre del proyecto</button>
         <p class="retro"></p>
       </div>
     </section>
