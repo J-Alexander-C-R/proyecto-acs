@@ -156,3 +156,68 @@ footer {
   color: var(--suave);
   border-top: 1px solid var(--borde);
 }
+
+/* Diagrama interactivo de capas */
+.diagrama {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.diagrama svg {
+  width: 100%;
+  max-width: 380px;
+  font-size: 13px;
+  font-weight: 600;
+  text-anchor: middle;
+}
+
+.diagrama g {
+  cursor: pointer;
+}
+
+.diagrama text {
+  fill: #1f2430;
+  pointer-events: none;
+}
+
+.diagrama text.claro {
+  fill: #ffffff;
+}
+
+.anillo {
+  stroke: var(--superficie);
+  stroke-width: 2;
+  transition: filter 0.2s;
+}
+
+.a5 { fill: #dbe6ff; }
+.a4 { fill: #c4d6ff; }
+.a3 { fill: #a9c2ff; }
+.a2 { fill: #8aabff; }
+.a1 { fill: #5f88f0; }
+.a0 { fill: #2457d6; }
+
+.diagrama g:hover .anillo,
+.diagrama g.seleccionada .anillo {
+  filter: brightness(0.85);
+}
+
+.info-capa {
+  padding: 18px;
+  border-left: 4px solid var(--acento);
+  border-radius: 8px;
+  background: var(--primario-claro);
+}
+
+.ayuda {
+  color: var(--suave);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 640px) {
+  .diagrama {
+    grid-template-columns: 1fr;
+  }
+}

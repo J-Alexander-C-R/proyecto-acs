@@ -21,7 +21,21 @@
   </nav>
 
   <main>
-    <!-- Las secciones del resumen se agregan desde rama-contenido -->
+    <section id="capas">
+      <h2>Las capas del proceso ACS</h2>
+      <p class="ayuda">Haz clic en cada capa para ver qué hace.</p>
+      <div class="diagrama">
+        <svg viewBox="0 0 420 420" role="img" aria-label="Diagrama de capas concéntricas del proceso ACS">
+          <g data-capa="<strong>Reporte de estado:</strong> informa qué pasó, quién lo hizo, cuándo y qué más se ve afectado."><circle cx="210" cy="210" r="200" class="anillo a5"/><text x="210" y="32">Reporte</text></g>
+          <g data-capa="<strong>Auditoría:</strong> comprueba que el cambio aprobado se hizo correctamente y siguiendo el proceso."><circle cx="210" cy="210" r="165" class="anillo a4"/><text x="210" y="67">Auditoría</text></g>
+          <g data-capa="<strong>Control de cambio:</strong> decide, mediante un proceso, qué cambios se aprueban y cómo se aplican."><circle cx="210" cy="210" r="130" class="anillo a3"/><text x="210" y="102">Control de cambio</text></g>
+          <g data-capa="<strong>Control de versión:</strong> guarda cada versión de los ICS y permite reconstruir cualquiera de ellas."><circle cx="210" cy="210" r="95" class="anillo a2"/><text x="210" y="137">Control de versión</text></g>
+          <g data-capa="<strong>Identificación:</strong> cada ICS recibe un nombre único y se organiza como objeto básico o agregado."><circle cx="210" cy="210" r="60" class="anillo a1"/><text x="210" y="172" class="claro">Identificación</text></g>
+          <g data-capa="<strong>ICS:</strong> ítem de configuración del software; nace aquí y viaja hacia afuera por todas las capas."><circle cx="210" cy="210" r="28" class="anillo a0"/><text x="210" y="215" class="claro">ICS</text></g>
+        </svg>
+        <div id="info-capa" class="info-capa">Selecciona una capa del diagrama.</div>
+      </div>
+    </section>
   </main>
 
   <footer>
