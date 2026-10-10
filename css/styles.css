@@ -221,3 +221,23 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Tabla comparativa de ejemplos */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.tabla th,
+.tabla td {
+  padding: 10px;
+  border: 1px solid var(--borde);
+  text-align: left;
+  vertical-align: top;
+}
+
+.tabla th {
+  background: var(--primario);
+  color: #fff;
+}

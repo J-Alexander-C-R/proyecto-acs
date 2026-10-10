@@ -27,6 +27,7 @@
     <a href="#auditoria">Auditoría</a>
     <a href="#reporte">Reporte</a>
     <a href="#ejemplos">Ejemplos</a>
+    <a href="#quiz">Quiz</a>
     <a href="#conclusion">Conclusión</a>
   </nav>
 
@@ -232,12 +233,64 @@
       </p>
     </section>
 
+    <section id="quiz">
+      <h2>Pon a prueba lo aprendido</h2>
+      <p class="ayuda">Elige una respuesta en cada pregunta. Puntaje: <strong id="puntaje">0 / 5</strong></p>
+
+      <div class="pregunta" data-correcta="2">
+        <p>1. ¿Cuál de estas NO es una de las cinco tareas del proceso ACS?</p>
+        <button class="opcion">Auditoría de la configuración</button>
+        <button class="opcion">Control de versión</button>
+        <button class="opcion">Estimación de costos</button>
+        <button class="opcion">Reporte de estado</button>
+        <p class="retro"></p>
+      </div>
+
+      <div class="pregunta" data-correcta="1">
+        <p>2. Un conjunto de objetos básicos y de otros agregados se llama…</p>
+        <button class="opcion">Línea de referencia</button>
+        <button class="opcion">Objeto agregado</button>
+        <button class="opcion">Conjunto de cambio</button>
+        <p class="retro"></p>
+      </div>
+
+      <div class="pregunta" data-correcta="0">
+        <p>3. ¿Qué documento emite la ACC cuando aprueba un cambio?</p>
+        <button class="opcion">Orden de Cambio de Ingeniería (OCI)</button>
+        <button class="opcion">Reporte de estado (REC)</button>
+        <button class="opcion">Petición de cambio</button>
+        <p class="retro"></p>
+      </div>
+
+      <div class="pregunta" data-correcta="2">
+        <p>4. ¿Qué mecanismo evita que dos personas sobrescriban sus cambios paralelos?</p>
+        <button class="opcion">Control de acceso</button>
+        <button class="opcion">Auditoría</button>
+        <button class="opcion">Control de sincronización</button>
+        <p class="retro"></p>
+      </div>
+
+      <div class="pregunta" data-correcta="1">
+        <p>5. ¿Cuándo se aplica el control de cambio formal?</p>
+        <button class="opcion">Antes de que el ICS sea línea de referencia</button>
+        <button class="opcion">Cuando el producto se libera al cliente</button>
+        <button class="opcion">Nunca; solo se usa control informal</button>
+        <p class="retro"></p>
+      </div>
+    </section>
+
     <section id="conclusion">
       <h2>Conclusión</h2>
       <p>
         La sección 22.3 muestra que la ACS es un proceso de cinco capas que acompaña a cada ítem de
         configuración durante toda su vida. Su valor no está en la burocracia, sino en poder responder
         en cualquier momento qué versión tenemos, qué cambió, quién lo cambió y por qué.
+      </p>
+      <p>
+        Al construir esta página con Git comprobamos que los conceptos de Pressman siguen vigentes: los
+        commits funcionan como conjuntos de cambio, las ramas permiten trabajar en paralelo y los conflictos
+        son exactamente el problema que el control de sincronización intenta resolver. La ACS, bien aplicada,
+        no frena al equipo: le da confianza para cambiar.
       </p>
     </section>
 
@@ -251,7 +304,7 @@
   </main>
 
   <footer>
-    <p>Proyecto ACS</p>
+    <p>Resumen de la sección 22.3 de Pressman · Administración de la Configuración del Software</p>
   </footer>
 
   <script src="js/script.js"></script>
