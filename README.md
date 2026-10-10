@@ -51,3 +51,7 @@ Al unir las ramas salieron 4 conflictos:
 Cuando agregué dos preguntas al quiz, el puntaje se quedó en "0 / 5" porque estaba escrito a mano. Lo corregí en `rama-diseno` para que cuente las preguntas solo, agregué un botón para reiniciar el quiz y lo integré con el **Pull Request #1**.
 
 Las versiones estables están marcadas con tags: `v0.1`, `v1.0`, `v1.1` y `v1.2`.
+
+## Qué aprendí
+
+Me limitó un poco tener que trabajar solo, porque la idea era hacerlo en grupo. Aun así pude ver cómo se trabaja en distintas ramas, cómo aparecen los conflictos cuando dos cambios tocan lo mismo y cómo corregir fallos o hacer ajustes sin dañar lo que ya funcionaba.
