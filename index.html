@@ -176,6 +176,53 @@
         línea para que desarrolladores y gerentes estén siempre al tanto de los cambios importantes.
       </p>
     </section>
+
+    <section id="ejemplos">
+      <h2>Ejemplos: la ACS aplicada con Git en este proyecto</h2>
+      <p>
+        Esta misma página se construyó aplicando el proceso ACS. La siguiente tabla relaciona cada tarea de
+        Pressman con lo que hicimos en el repositorio:
+      </p>
+      <table class="tabla">
+        <thead>
+          <tr><th>Tarea ACS</th><th>Concepto de Pressman</th><th>Cómo se aplicó con Git/GitHub</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Identificación</td><td>ICS con nombre único; objetos básicos y agregados</td><td><code>index.html</code>, <code>styles.css</code> y <code>script.js</code> son objetos básicos; el repositorio completo es el objeto agregado.</td></tr>
+          <tr><td>Control de versión</td><td>Repositorio, versiones y conjuntos de cambio</td><td>Cada <em>commit</em> es un conjunto de cambio con autor, fecha y motivo; los <em>tags</em> (<code>v0.1</code>, <code>v1.0</code>…) marcan líneas de referencia.</td></tr>
+          <tr><td>Control de cambio</td><td>Petición, evaluación, OCI, check-out / check-in</td><td>Cada parte se trabajó en su propia rama (<code>rama-contenido</code>, <code>rama-diseno</code>) y se integró a <code>main</code> mediante <em>merge</em>.</td></tr>
+          <tr><td>Control de sincronización</td><td>Evitar que dos cambios paralelos se sobrescriban</td><td>Git detectó <strong>conflictos</strong> cuando ambas ramas editaron las mismas líneas; se resolvieron a mano, conservando lo correcto de cada lado.</td></tr>
+          <tr><td>Auditoría</td><td>Verificar que el cambio se hizo bien</td><td>Antes de cada merge se revisó el <code>git diff</code> y se probó la página en el navegador.</td></tr>
+          <tr><td>Reporte de estado</td><td>¿Qué?, ¿quién?, ¿cuándo?, ¿qué más afecta?</td><td><code>git log --graph</code> muestra el historial completo; el README documenta la participación y los conflictos.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Ejemplo de una petición de cambio</h3>
+      <p>
+        Supongamos que un usuario reporta que el menú no funciona en el celular. El desarrollador evalúa el
+        impacto (solo afecta <code>styles.css</code>), la ACC —en un equipo pequeño, el líder— aprueba el cambio
+        (OCI), se crea una rama <code>fix-menu-movil</code> (<em>check-out</em>), se corrige, se revisa
+        (auditoría), se integra a <code>main</code> (<em>check-in</em>) y se publica una nueva versión
+        <code>v1.0.1</code>. El <code>git log</code> queda como reporte de estado.
+      </p>
+    </section>
+
+    <section id="conclusion">
+      <h2>Conclusión</h2>
+      <p>
+        La sección 22.3 muestra que la ACS es un proceso de cinco capas que acompaña a cada ítem de
+        configuración durante toda su vida. Su valor no está en la burocracia, sino en poder responder
+        en cualquier momento qué versión tenemos, qué cambió, quién lo cambió y por qué.
+      </p>
+    </section>
+
+    <section id="referencia">
+      <h2>Referencia bibliográfica</h2>
+      <p>
+        Pressman, R. S. (2010). <em>Ingeniería del software: un enfoque práctico</em> (7.ª ed.).
+        McGraw-Hill. Capítulo 22, sección 22.3 "El proceso ACS", pp. 508-515.
+      </p>
+    </section>
   </main>
 
   <footer>
